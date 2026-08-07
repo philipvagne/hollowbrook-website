@@ -77,7 +77,7 @@
 
 ## Phase 3 — Remaining Page Wireframes and Content
 
-- [ ] Document Projects page design
+- [x] Document Projects page design
 - [x] Document Services page design
 - [x] Document About page design
 - [ ] Document FAQ page design
@@ -90,7 +90,7 @@
 
 ## Phase 4 — Remaining Pages
 
-- [ ] Build Projects
+- [x] Build Projects
 - [x] Build Services
 - [x] Build About
 - [ ] Build FAQ
