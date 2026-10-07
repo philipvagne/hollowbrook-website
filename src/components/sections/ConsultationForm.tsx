@@ -66,7 +66,13 @@ function validateAll(values: Values): Errors {
 }
 
 const controlStyles =
-  "mt-2 block w-full border bg-cream px-4 py-3 text-base text-olive placeholder:text-olive/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-olive";
+  "mt-2 block w-full border bg-cream px-4 py-3 text-base text-olive placeholder:text-olive/50 focus:outline-hidden focus-visible:outline-hidden";
+
+const normalBorder =
+  "border-frame-accent/40 focus:border-olive focus:shadow-[inset_0_0_0_1px_#233628] focus-visible:border-olive focus-visible:shadow-[inset_0_0_0_1px_#233628]";
+
+const errorBorder =
+  "border-[#8a2f1f] shadow-[inset_0_0_0_1px_#8a2f1f] focus:border-[#8a2f1f] focus-visible:border-[#8a2f1f]";
 
 type FieldProps = {
   field: FieldName;
@@ -100,7 +106,7 @@ function Field({ field, label, required, error, children }: FieldProps) {
       </label>
       {children({
         id,
-        className: `${controlStyles} ${error ? "border-[#8a2f1f]" : "border-frame-accent/40"}`,
+        className: `${controlStyles} ${error ? errorBorder : normalBorder}`,
         "aria-invalid": error ? true : undefined,
         "aria-describedby": error ? errorId : undefined,
         "aria-required": required ? true : undefined,
