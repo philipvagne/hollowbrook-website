@@ -45,12 +45,12 @@ export function AboutPage() {
 
       <section className="bg-cream pb-[clamp(2.5rem,4vw,4rem)] pt-[clamp(3.5rem,5.5vw,5.5rem)]">
           <Container>
-            <div className="grid items-center gap-10 md:grid-cols-12 md:gap-12 lg:gap-20">
-              <div className="md:col-span-5 lg:col-span-4 lg:ml-[8%] lg:w-[118%]">
+            <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-20">
+              <div className="lg:col-span-4 lg:ml-[8%] lg:w-[118%]">
                 <h2 className="text-3xl font-semibold sm:text-4xl">
                   Our story began with one decision.
                 </h2>
-                <div className="mt-6 max-w-md space-y-5 leading-7 text-olive/78">
+                <div className="mt-6 max-w-xl space-y-5 lg:max-w-md leading-7 text-olive/78">
                   <p>
                     Hollowbrook began in 2011, after Dave was laid off and
                     decided to build a business of his own. What started as one
@@ -70,7 +70,7 @@ export function AboutPage() {
               <FramedImage
                 src={daveImage}
                 alt="Dave walking through a landscaped property with two homeowners during a consultation"
-                className="md:col-span-7 lg:col-span-7 lg:col-start-6"
+                className="lg:col-span-7 lg:col-start-6"
               />
             </div>
           </Container>
@@ -78,14 +78,14 @@ export function AboutPage() {
 
       <section className="bg-cream pb-[clamp(3.5rem,5.5vw,5.75rem)] pt-2 sm:pt-4">
           <Container>
-            <div className="grid items-center gap-10 md:grid-cols-12 md:gap-12 lg:gap-20">
+            <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-20">
               <FramedImage
                 src={crewImage}
                 alt="Hollowbrook crew carefully setting a large stone paver during patio construction"
-                className="md:col-span-6 lg:col-span-6 lg:-ml-[3%]"
+                className="lg:col-span-6 lg:-ml-[3%]"
               />
 
-              <div className="md:col-span-6 lg:col-span-5 lg:col-start-8 lg:max-w-lg">
+              <div className="max-w-xl lg:col-span-5 lg:col-start-8 lg:max-w-lg">
                 <h2 className="text-3xl font-semibold sm:text-4xl">
                   Craftsmanship carried by people.
                 </h2>

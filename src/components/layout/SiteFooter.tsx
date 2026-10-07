@@ -12,17 +12,22 @@ export function SiteFooter() {
             © {new Date().getFullYear()} Hollowbrook Outdoor Living
           </p>
         </div>
-        <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-5 gap-y-2">
+        <nav aria-label="Footer navigation" className="grid grid-cols-3 gap-x-4 md:flex md:flex-wrap md:gap-x-1 md:-mx-2 lg:mx-0 lg:gap-x-5 lg:gap-y-2">
           {primaryNavigation.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
-              className="text-sm font-medium text-olive underline-offset-4 hover:underline"
+              className="inline-flex min-h-11 items-center md:px-2 text-sm font-medium text-olive underline-offset-4 hover:underline lg:min-h-0 lg:px-0"
             >
               {item.label}
             </NavLink>
           ))}
         </nav>
+      </Container>
+      <Container>
+        <p className="mt-8 text-sm text-olive/75">
+          Hollowbrook Outdoor Living is a fictional company created as a design concept.
+        </p>
       </Container>
     </footer>
   );

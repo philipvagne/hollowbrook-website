@@ -276,20 +276,65 @@ Focus the copy on:
 
 Answer practical questions that prospective clients commonly have before making contact.
 
-Suggested questions, pending final approval:
+## Heading
 
-1. What areas do you serve?
-2. What types of projects do you take on?
-3. Do you provide landscape design only, or construction as well?
-4. What should I expect during the consultation?
-5. How early should I begin planning?
-6. Can you work with an existing patio or landscape?
-7. How long does a typical project take?
-8. How is project pricing determined?
-9. Do you handle permits and subcontractors when needed?
-10. What happens after the project is completed?
+> Frequently asked questions
 
-Answers are not yet finalized. Do not invent legal guarantees, exact timelines, service areas, warranties, licensing claims, or pricing.
+## Intro
+
+> Answers to common questions about our process, timelines and what to expect.
+
+## Questions and Answers
+
+Approved by the project owner.
+
+1. What types of projects do you take on?
+
+We design and build residential outdoor spaces: patios and natural stonework, pergolas and outdoor living areas, planting and landscape design, and landscape lighting.
+
+2. Do you handle both design and construction?
+
+Yes. One team carries your project from the first plan to the finished space, so nothing gets lost between design and build.
+
+3. How does the consultation work?
+
+We visit your property, talk through how you use the space and what you would like to change, and walk the site together. There is no obligation, and a written proposal follows.
+
+4. How long does a project take?
+
+It depends on the scope. A single patio can take a few weeks, while larger projects with several features take a few months. We agree a timeline with you before work begins.
+
+5. What does a project cost?
+
+Costs depend on size, materials and site conditions. After the consultation we provide a written estimate so you know what to expect before you decide.
+
+6. Which areas do you serve?
+
+We work with homes across Northeast Ohio, including Moreland Hills and Gates Mills.
+
+7. Can a project be built in phases?
+
+Yes. We can create a complete plan for the whole property and build it in stages that suit your schedule and budget.
+
+8. What happens after the project is finished?
+
+We walk through the finished space with you and share care guidance for the planting and stonework. We also check in during the first season.
+
+## Closing Block
+
+### Heading
+
+> Still have a question?
+
+### Supporting Copy
+
+Placeholder pending final copy:
+
+> Get in touch and we will be glad to talk it through.
+
+### Button
+
+> Book a Consultation
 
 # Contact
 
@@ -297,29 +342,43 @@ Answers are not yet finalized. Do not invent legal guarantees, exact timelines, 
 
 Make it easy for a prospective client to begin a consultation.
 
-## Suggested Form Fields
+## Heading and Intro
 
-- Name
-- Email
-- Phone
-- Project location
-- Project type
-- Approximate timeline
-- Message
+> Book a consultation
 
-Optional field:
+> Tell us about your property and what you have in mind, and we will reply to arrange a visit.
 
-- Approximate investment range
+## Form Fields (approved)
 
-Do not add account creation, instant estimates, or an overly complicated quote builder.
+- Name (required)
+- Email (required)
+- Phone (optional)
+- Town or city (optional)
+- Project type (select): Patio and stonework / Pergola and outdoor living / Planting and landscape design / Landscape lighting / Not sure yet
+- Preferred timing (select): As soon as possible / Within 3 months / Within 6 months / Just exploring
+- Tell us about your project (textarea, required)
 
-## Contact Details
+Submit button: Request a consultation
 
-Placeholder only until final fictional details are approved:
+Do not add account creation, instant estimates, an investment range, or an overly complicated quote builder.
 
-- Phone: To be supplied
-- Email: To be supplied
-- Service area: Northeast Ohio / Greater Cleveland area, pending confirmation
+## Concept Notice (shown above the form)
+
+> Hollowbrook Outdoor Living is a fictional company and this website is a design concept. This form does not send or store anything.
+
+## Success Message
+
+> Thank you. This is a concept website, so your request was not sent.
+
+Button: Back to the form
+
+The form never sends or stores anything: no network requests, no form action, no browser storage.
+
+## Contact Details (approved, fictional)
+
+- Email: hello@hollowbrook.example
+- Phone: (440) 555-0142
+- Service area: Northeast Ohio
 
 # Footer
 
@@ -332,4 +391,6 @@ Potential content:
 - Navigation
 - Copyright
 
-Do not publish placeholder contact details as if they were final.
+Every page footer carries this line:
+
+> Hollowbrook Outdoor Living is a fictional company created as a design concept.

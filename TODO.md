@@ -80,10 +80,10 @@
 - [x] Document Projects page design
 - [x] Document Services page design
 - [x] Document About page design
-- [ ] Document FAQ page design
-- [ ] Document Contact page design
+- [x] Document FAQ page design
+- [x] Document Contact page design
 - [ ] Finalize page copy
-- [ ] Finalize fictional contact details
+- [x] Finalize fictional contact details
 - [ ] Finalize FAQ answers
 - [ ] Confirm image assignment for every page
 - [ ] Supply final logo or approve typographic wordmark
@@ -93,8 +93,8 @@
 - [x] Build Projects
 - [x] Build Services
 - [x] Build About
-- [ ] Build FAQ
-- [ ] Build Contact
+- [x] Build FAQ
+- [x] Build Contact
 
 ## Phase 5 — Final Polish
 

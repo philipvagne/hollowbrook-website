@@ -75,15 +75,15 @@ function ServiceComposition({ service }: { service: Service }) {
   return (
     <section aria-labelledby={`service-${service.number}`}>
       <div
-        className={`relative w-full pt-[62%] md:flex md:min-h-[clamp(22rem,31vw,30rem)] md:items-center md:py-6 lg:py-7 ${
+        className={`relative w-full lg:flex lg:min-h-[clamp(22rem,31vw,30rem)] lg:items-center lg:py-7 ${
           imageIsLeft ? "mr-auto" : "ml-auto"
         }`}
       >
         <figure
-          className={`absolute top-0 z-10 aspect-square w-[92%] sm:w-[76%] md:top-1/2 md:w-[38%] md:-translate-y-1/2 md:aspect-[5/4] ${
+          className={`relative z-10 aspect-[4/3] w-[92%] sm:w-[76%] lg:absolute lg:top-1/2 lg:mx-0 lg:w-[38%] lg:-translate-y-1/2 lg:aspect-[5/4] ${
             imageIsLeft
-              ? "left-0 md:[box-shadow:10px_12px_22px_rgba(35,54,40,0.08)]"
-              : "right-0 md:[box-shadow:-10px_12px_22px_rgba(35,54,40,0.08)]"
+              ? "left-0 mr-auto lg:[box-shadow:10px_12px_22px_rgba(35,54,40,0.08)]"
+              : "right-0 ml-auto lg:[box-shadow:-10px_12px_22px_rgba(35,54,40,0.08)]"
           }`}
         >
           <img
@@ -97,13 +97,15 @@ function ServiceComposition({ service }: { service: Service }) {
         </figure>
 
         <div
-          className={`relative z-0 w-full border border-olive/65 px-6 pb-8 pt-12 sm:px-9 sm:pb-10 sm:pt-14 md:w-[64%] md:py-6 lg:py-7 ${
+          className={`relative z-0 -mt-8 w-full border border-olive/65 px-6 pb-8 pt-14 sm:px-9 sm:pb-10 sm:pt-16 lg:mt-0 lg:w-[64%] lg:py-7 ${
             imageIsLeft
-              ? "ml-auto md:-translate-x-7 md:pl-[calc(14%+1.75rem)] md:pr-9 lg:pr-12"
-              : "mr-auto md:translate-x-7 md:pl-9 md:pr-[calc(14%+1.75rem)] lg:pl-12"
+              ? "ml-auto lg:-translate-x-7 lg:pl-[calc(14%+1.75rem)] lg:pr-12"
+              : "mr-auto lg:translate-x-7 lg:pl-12 lg:pr-[calc(14%+1.75rem)]"
           }`}
         >
-          <div className={imageIsLeft ? "" : "md:ml-auto"}>
+          <div
+            className={`max-w-[38rem] lg:max-w-none ${imageIsLeft ? "" : "lg:ml-auto"}`}
+          >
             <h2
               id={`service-${service.number}`}
               className="text-[clamp(1.75rem,3vw,2.55rem)] font-semibold leading-[1.08] tracking-[-0.025em]"
