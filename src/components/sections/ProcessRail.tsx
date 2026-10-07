@@ -17,7 +17,7 @@ export function ProcessRail() {
       </Container>
 
       <div
-        className="process-scroll mt-10 flex snap-x snap-mandatory gap-0 overflow-x-auto px-page-x pb-4 lg:mx-auto lg:mt-12 lg:grid lg:max-w-site lg:grid-cols-4 lg:overflow-visible lg:pb-0"
+        className="process-scroll mt-10 flex snap-x snap-mandatory scroll-px-page-x gap-0 overflow-x-auto px-page-x pb-4 lg:mx-auto lg:mt-12 lg:grid lg:max-w-site lg:grid-cols-4 lg:overflow-visible lg:pb-0"
         aria-label="The Hollowbrook process"
       >
         {processSteps.map((step, index) => (

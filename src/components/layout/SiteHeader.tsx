@@ -21,7 +21,7 @@ export function SiteHeader() {
       <Container className="flex min-h-20 items-center justify-between gap-8">
         <NavLink
           to="/"
-          className={`max-w-48 text-base font-semibold leading-tight tracking-tight sm:max-w-none sm:text-lg ${
+          className={`inline-flex min-h-11 max-w-48 items-center text-base font-semibold leading-tight tracking-tight sm:max-w-none sm:text-lg lg:min-h-0 ${
             isHomePage ? "text-cream" : "text-olive"
           }`}
           onClick={closeMenu}

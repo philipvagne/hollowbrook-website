@@ -6,10 +6,22 @@ export function TestimonialPanel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [timerReset, setTimerReset] = useState(0);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(
+    () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  );
   const activeTestimonial = testimonials[activeIndex];
 
   useEffect(() => {
-    if (isPaused) {
+    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const handleChange = (event: MediaQueryListEvent) =>
+      setPrefersReducedMotion(event.matches);
+
+    query.addEventListener("change", handleChange);
+    return () => query.removeEventListener("change", handleChange);
+  }, []);
+
+  useEffect(() => {
+    if (isPaused || prefersReducedMotion) {
       return;
     }
 
@@ -18,7 +30,7 @@ export function TestimonialPanel() {
     }, 10_000);
 
     return () => window.clearTimeout(rotationTimer);
-  }, [activeIndex, isPaused, timerReset]);
+  }, [activeIndex, isPaused, prefersReducedMotion, timerReset]);
 
   const selectTestimonial = (index: number) => {
     setActiveIndex(index);
@@ -41,7 +53,7 @@ export function TestimonialPanel() {
     >
       <Container>
         <div className="relative ml-auto max-w-[78rem] pb-5 lg:min-h-[29rem] lg:py-6">
-          <div className="beige-panel-extension relative bg-beige-panel px-7 pb-20 pt-12 text-beige-text sm:px-12 sm:pb-24 sm:pt-14 lg:absolute lg:-right-24 lg:left-[4%] lg:top-12 lg:h-80 lg:px-16 lg:py-16">
+          <div className="beige-panel-extension relative bg-beige-panel px-7 pb-12 pt-12 text-beige-text sm:px-12 sm:pb-14 sm:pt-14 lg:absolute lg:-right-24 lg:left-[4%] lg:top-12 lg:h-80 lg:px-16 lg:py-16">
             <h2 className="max-w-md text-3xl font-semibold sm:text-4xl">
               Outdoor spaces that feel considered from every angle.
             </h2>
@@ -52,16 +64,16 @@ export function TestimonialPanel() {
           </div>
 
           <div
-            className="relative -mt-12 ml-auto mr-0 min-h-[22rem] w-[calc(100%-1rem)] px-7 py-10 text-olive sm:-mt-16 sm:w-[78%] sm:px-10 lg:absolute lg:-right-8 lg:top-0 lg:mt-0 lg:h-[26rem] lg:min-h-0 lg:w-[49%] lg:px-14 lg:py-14"
+            className="relative mt-6 min-h-[22rem] w-full px-7 py-10 text-olive sm:px-12 lg:absolute lg:-right-8 lg:top-0 lg:mt-0 lg:h-[26rem] lg:min-h-0 lg:w-[49%] lg:px-14 lg:py-14"
             aria-live="polite"
           >
             <div
               aria-hidden="true"
-              className="absolute inset-x-0 top-0 z-0 h-12 bg-beige-panel sm:h-16 lg:h-12 lg:bg-cream"
+              className="absolute inset-x-0 top-0 z-0 hidden h-12 lg:block lg:bg-cream"
             />
             <div
               aria-hidden="true"
-              className="absolute inset-x-0 bottom-0 top-12 z-0 bg-cream sm:top-16 lg:bottom-12 lg:top-12 lg:bg-beige-panel"
+              className="absolute inset-0 z-0 bg-cream lg:bottom-12 lg:top-12 lg:bg-beige-panel"
             />
             <div
               aria-hidden="true"
@@ -73,18 +85,24 @@ export function TestimonialPanel() {
             />
             <span
               aria-hidden="true"
-              className="absolute -left-3 -top-9 z-30 text-7xl font-semibold leading-none text-frame-accent sm:-left-5 sm:-top-11 sm:text-8xl"
+              className="absolute z-30 hidden font-semibold leading-none text-frame-accent lg:-left-5 lg:-top-11 lg:block lg:text-8xl"
             >
               “
             </span>
             <div
-              className="absolute inset-x-7 inset-y-10 z-30 flex flex-col justify-center sm:inset-x-10 lg:inset-x-14 lg:inset-y-12"
+              className="relative z-30 flex flex-col justify-center lg:absolute lg:inset-x-14 lg:inset-y-12"
             >
+              <span
+                aria-hidden="true"
+                className="-mt-1 mb-3 block h-10 text-6xl font-semibold leading-none text-frame-accent lg:hidden"
+              >
+                “
+              </span>
               <blockquote
                 key={activeIndex}
                 className="testimonial-content flex min-h-0 flex-1 flex-col justify-center"
               >
-                <p className="text-lg leading-8 sm:text-xl">
+                <p className="text-lg leading-8 [text-wrap:pretty] sm:text-xl">
                   {activeTestimonial.quote}
                 </p>
                 <footer className="mt-7 text-sm font-medium">
@@ -93,7 +111,7 @@ export function TestimonialPanel() {
               </blockquote>
 
               <div
-                className="mt-7 flex items-center gap-1"
+                className="mt-7 flex items-center justify-center gap-1 lg:justify-start"
                 aria-label="Choose testimonial"
               >
                 {testimonials.map((testimonial, index) => (
@@ -101,7 +119,7 @@ export function TestimonialPanel() {
                     key={testimonial.attribution}
                     type="button"
                     onClick={() => selectTestimonial(index)}
-                    className="group/indicator inline-flex min-h-11 min-w-8 items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-olive"
+                    className="group/indicator inline-flex min-h-11 min-w-11 items-center lg:min-w-8 justify-center focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-olive"
                     aria-label={`Show testimonial ${index + 1}`}
                     aria-pressed={activeIndex === index}
                     aria-current={activeIndex === index ? "true" : undefined}
@@ -120,7 +138,7 @@ export function TestimonialPanel() {
             </div>
             <span
               aria-hidden="true"
-              className="absolute -bottom-14 right-1 z-30 text-7xl font-semibold leading-none text-frame-accent sm:-bottom-16 sm:right-3 sm:text-8xl"
+              className="absolute z-30 hidden font-semibold leading-none text-frame-accent lg:-bottom-16 lg:right-3 lg:block lg:text-8xl"
             >
               ”
             </span>

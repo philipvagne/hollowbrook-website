@@ -82,7 +82,7 @@ function ProjectCard({ className = "", onOpen, project }: ProjectCardProps) {
           className="h-full w-full object-cover"
         />
         <div className="preview-overlay absolute inset-2 flex flex-col justify-end bg-gradient-to-t from-olive/80 via-olive/15 to-transparent p-5 text-cream sm:inset-2.5 sm:p-6">
-          <p className="text-[0.68rem] font-medium uppercase tracking-[0.16em] text-cream/80">
+          <p className="text-[0.68rem] font-medium uppercase tracking-[0.1em] text-cream/80 max-lg:text-balance lg:tracking-[0.16em]">
             {project.descriptor}
           </p>
           <h2 className="mt-2 text-xl font-semibold leading-tight sm:text-2xl">
