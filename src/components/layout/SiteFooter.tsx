@@ -24,6 +24,11 @@ export function SiteFooter() {
           ))}
         </nav>
       </Container>
+      <Container>
+        <p className="mt-8 text-sm text-olive/75">
+          Hollowbrook Outdoor Living is a fictional company created as a design concept.
+        </p>
+      </Container>
     </footer>
   );
 }

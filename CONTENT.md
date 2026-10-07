@@ -342,29 +342,43 @@ Placeholder pending final copy:
 
 Make it easy for a prospective client to begin a consultation.
 
-## Suggested Form Fields
+## Heading and Intro
 
-- Name
-- Email
-- Phone
-- Project location
-- Project type
-- Approximate timeline
-- Message
+> Book a consultation
 
-Optional field:
+> Tell us about your property and what you have in mind, and we will reply to arrange a visit.
 
-- Approximate investment range
+## Form Fields (approved)
 
-Do not add account creation, instant estimates, or an overly complicated quote builder.
+- Name (required)
+- Email (required)
+- Phone (optional)
+- Town or city (optional)
+- Project type (select): Patio and stonework / Pergola and outdoor living / Planting and landscape design / Landscape lighting / Not sure yet
+- Preferred timing (select): As soon as possible / Within 3 months / Within 6 months / Just exploring
+- Tell us about your project (textarea, required)
 
-## Contact Details
+Submit button: Request a consultation
 
-Placeholder only until final fictional details are approved:
+Do not add account creation, instant estimates, an investment range, or an overly complicated quote builder.
 
-- Phone: To be supplied
-- Email: To be supplied
-- Service area: Northeast Ohio / Greater Cleveland area, pending confirmation
+## Concept Notice (shown above the form)
+
+> Hollowbrook Outdoor Living is a fictional company and this website is a design concept. This form does not send or store anything.
+
+## Success Message
+
+> Thank you. This is a concept website, so your request was not sent.
+
+Button: Back to the form
+
+The form never sends or stores anything: no network requests, no form action, no browser storage.
+
+## Contact Details (approved, fictional)
+
+- Email: hello@hollowbrook.example
+- Phone: (440) 555-0142
+- Service area: Northeast Ohio
 
 # Footer
 
@@ -377,4 +391,6 @@ Potential content:
 - Navigation
 - Copyright
 
-Do not publish placeholder contact details as if they were final.
+Every page footer carries this line:
+
+> Hollowbrook Outdoor Living is a fictional company created as a design concept.
