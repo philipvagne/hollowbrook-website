@@ -80,7 +80,7 @@
 - [x] Document Projects page design
 - [x] Document Services page design
 - [x] Document About page design
-- [ ] Document FAQ page design
+- [x] Document FAQ page design
 - [ ] Document Contact page design
 - [ ] Finalize page copy
 - [ ] Finalize fictional contact details
@@ -93,7 +93,7 @@
 - [x] Build Projects
 - [x] Build Services
 - [x] Build About
-- [ ] Build FAQ
+- [x] Build FAQ
 - [ ] Build Contact
 
 ## Phase 5 — Final Polish
